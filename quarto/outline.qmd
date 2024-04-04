@@ -1,5 +1,10 @@
 ---
 title: Mini-rotations - Trophic overyielding and infection dynamics
+format: 
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 author:
   - name: Cole Brookson
 abstract: |
@@ -11,3 +16,21 @@ citation:
 number-sections: true
 jupyter: julia-1.10
 ---
+
+We start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of Abrams (2022, pg. 39), which replaces inter- and intra-specific competition terms so that each species has a neutral parameter, $\alpha$. We then have
+
+$$
+\begin{equation}
+\label{eqn:simple-lv}
+
+\frac{dN_1}{dt} = N_1(r_1 - \alpha_{11}N_1 - \alpha_{12}N2)
+\frac{dN_2}{dt} = N_2(r_2 - \alpha_{21}N_1 - \alpha_{22}N2)
+
+\end{eqeuation}
+$$
+
+Since we are also ultimately interested 
+
+NOTES:
+
+1.  Maybe interesting to actually use the ones with inter- and intra-specific competition so we can have the within-species term have some additional dynamics with respect to the infected organisms being out-competed by their susceptible conspecifics?

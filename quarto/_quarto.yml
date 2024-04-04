@@ -13,5 +13,8 @@ format:
   jats: default
   agu-pdf: default
 
+editor:
+  render-on-save: true
+
 
 

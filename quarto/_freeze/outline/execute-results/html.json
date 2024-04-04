@@ -1,10 +1,10 @@
 {
-  "hash": "9445f134fa525bd9c32daf76053c8dd4",
+  "hash": "a71b4152b4bdbca5d5dabd232348673c",
   "result": {
     "engine": "jupyter",
-    "markdown": "---\ntitle: Mini-rotations - Trophic overyielding and infection dynamics\nauthor:\n  - name: Cole Brookson\nabstract: |\n  Working through ideas for the mini-rotations project\ndate: last-modified\nbibliography: references.bib\ncitation:\n  container-title: Earth and Space Science\nnumber-sections: true\n---\n\n",
+    "markdown": "---\ntitle: Mini-rotations - Trophic overyielding and infection dynamics\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\nauthor:\n  - name: Cole Brookson\nabstract: |\n  Working through ideas for the mini-rotations project\ndate: last-modified\nbibliography: references.bib\ncitation:\n  container-title: Earth and Space Science\nnumber-sections: true\n---\n\n:::{#4f373661 .cell .markdown}\nWe start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of Abrams (2022, pg. 39), which replaces inter- and intra-specific competition terms so that each species has a neutral parameter, $\\alpha$. We then have\n\n$$\n\\begin{equation}\n\\label{eqn:simple-lv}\n\n\\frac{dN_1}{dt} = N_1(r_1 - \\alpha_{11}N_1 - \\alpha_{12}N2)\n\\frac{dN_2}{dt} = N_2(r_2 - \\alpha_{21}N_1 - \\alpha_{22}N2)\n\n\\end{eqeuation}\n$$\n\nSince we are also ultimately interested \n\nNOTES:\n\n1.  Maybe interesting to actually use the ones with inter- and intra-specific competition so we can have the within-species term have some additional dynamics with respect to the infected organisms being out-competed by their susceptible conspecifics?\n:::\n\n",
     "supporting": [
-      "outline_files"
+      "outline_files/figure-html"
     ],
     "filters": [],
     "includes": {}
