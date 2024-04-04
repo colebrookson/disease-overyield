@@ -1,0 +1,13 @@
+---
+title: Mini-rotations - Trophic overyielding and infection dynamics
+author:
+  - name: Cole Brookson
+abstract: |
+  Working through ideas for the mini-rotations project
+date: last-modified
+bibliography: references.bib
+citation:
+  container-title: Earth and Space Science
+number-sections: true
+jupyter: julia-1.10
+---

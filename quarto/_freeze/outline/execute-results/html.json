@@ -1,0 +1,12 @@
+{
+  "hash": "9445f134fa525bd9c32daf76053c8dd4",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Mini-rotations - Trophic overyielding and infection dynamics\nauthor:\n  - name: Cole Brookson\nabstract: |\n  Working through ideas for the mini-rotations project\ndate: last-modified\nbibliography: references.bib\ncitation:\n  container-title: Earth and Space Science\nnumber-sections: true\n---\n\n",
+    "supporting": [
+      "outline_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
