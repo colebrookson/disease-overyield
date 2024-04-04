@@ -77,6 +77,39 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
@@ -157,7 +190,12 @@ Working through ideas for the mini-rotations project
 
 Previous work has shown that the coexistence of a pair or mixture of
 species can reach higher abundance than the species with the highest
-carrying capacity
+carrying capacity (Loreau 2004; Poisot \emph{et al.} 2013). This idea of
+``transgressive overyielding'' is the basis for much work on
+biodiversity-ecosystem functioning relationships (BEF) (i.e., Schmid
+\emph{et al.} 2008). Some research has suggested approaches to linking
+this concept to disease dynamics (Johnson \emph{et al.} 2015), however,
+few studies have explicitly developed theory to this effect. Noteably
 
 \section{Methods}
 
@@ -201,9 +239,42 @@ these competing species is infected with some type of pathogen, we can
 additionally consider species 1 as being infected with a generalized
 pathogen.
 
+\section{References}
+
 \textsubscript{Source:
 \href{https://colebrookson.github.io/disease-overyield/index.qmd.html}{Article
 Notebook}}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-abrams_competition_2022}
+Abrams, P.A. (2022).
+\emph{\href{https://books.google.ca/books?hl=en&lr=&id=fTaFEAAAQBAJ&oi=fnd&pg=PP1&dq=abrams+2022+competition+theory&ots=_cdJwLVcq_&sig=ZUB2hKd4WD_YZsynGVHu114pnJ4}{Competition
+theory in ecology}}. Oxford University Press.
+
+\bibitem[\citeproctext]{ref-johnson_frontiers_2015}
+Johnson, P.T.J., Ostfeld, R.S. \& Keesing, F. (2015).
+\href{https://doi.org/10.1111/ele.12479}{Frontiers in research on
+biodiversity and disease}. \emph{Ecology Letters}, 18, 1119--1133.
+
+\bibitem[\citeproctext]{ref-loreau_does_2004}
+Loreau, M. (2004).
+\href{https://doi.org/10.1111/j.0030-1299.2004.12685.x}{Does functional
+redundancy exist?} \emph{Oikos}, 104, 606--611.
+
+\bibitem[\citeproctext]{ref-poisot_trophic_2013}
+Poisot, T., Mouquet, N. \& Gravel, D. (2013).
+\href{https://doi.org/10.1111/ele.12118}{Trophic complementarity drives
+the biodiversity--ecosystem functioning relationship in food webs}.
+\emph{Ecology Letters}, 16, 853--861.
+
+\bibitem[\citeproctext]{ref-schmid_biodiversity_2008}
+Schmid, B., Hector, A., Saha, P. \& Loreau, M. (2008).
+\href{https://academic.oup.com/jpe/article-abstract/1/2/95/989985}{Biodiversity
+effects and transgressive overyielding}. \emph{Journal of Plant
+Ecology}, 1, 95--102.
+
+\end{CSLReferences}
 
 
 

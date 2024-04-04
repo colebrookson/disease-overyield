@@ -20,11 +20,11 @@ jupyter: julia-1.10
 
 \section{Background}
 
-Previous work has shown that the coexistence of a pair or mixture of species can reach higher abundance than the species with the highest carrying capacity 
+Previous work has shown that the coexistence of a pair or mixture of species can reach higher abundance than the species with the highest carrying capacity [@loreau_does_2004; @poisot_trophic_2013]. This idea of "transgressive overyielding" is the basis for much work on biodiversity-ecosystem functioning relationships (BEF) [i.e., @schmid_biodiversity_2008]. Some research has suggested approaches to linking this concept to disease dynamics [@johnson_frontiers_2015], however, few studies have explicitly developed theory to this effect. Noteably    
 
 \section{Methods}
 
-We start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of Abrams (2022, pg. 39), which includes terms for both inter- and intra-specific competition. We then have
+We start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of @abrams_competition_2022[pg. 39], which includes terms for both inter- and intra-specific competition. We then have
 
 \begin{equation}
   \label{eqn:simple-lv-1}
@@ -55,3 +55,5 @@ The relation to the original generalized Lotka-Volterra model (as pointed out by
 \end{table}
 
 Since we are also ultimately interested in the dynamics when one of these competing species is infected with some type of pathogen, we can additionally consider species 1 as being infected with a generalized pathogen.
+
+\section{References}
