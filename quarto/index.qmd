@@ -20,7 +20,7 @@ jupyter: julia-1.10
 
 \section{Background}
 
-Previous work has shown that the coexistence of a pair or mixture of species can reach higher abundance than the species with the highest carrying capacity [@loreau_does_2004; @poisot_trophic_2013]. This idea of "transgressive overyielding" is the basis for much work on biodiversity-ecosystem functioning relationships (BEF) [i.e., @schmid_biodiversity_2008]. Some research has suggested approaches to linking this concept to disease dynamics [@johnson_frontiers_2015], however, few studies have explicitly developed theory to this effect. Noteably    
+Previous work has shown that the coexistence of a pair or mixture of species can reach higher abundance than the species with the highest carrying capacity [@loreau_does_2004; @poisot_trophic_2013]. This idea of "transgressive overyielding" is the basis for much work on biodiversity-ecosystem functioning relationships (BEF) [i.e., @schmid_biodiversity_2008]. Some research has suggested approaches to linking this concept to disease dynamics [@johnson_frontiers_2015], however, few studies have explicitly developed theory to this effect. Noteably @sieben_quantifying_2022 and others have provided elegant frameworks for considering competition and coexistence from the perspective of parasites themselves existing in both between- and within-host frameworks. However, \textbf{what effects do infection dynamics have on transgressive overyielding?} Is it possible that the inclusion of pathogen dynamics into classic models of competition would change the conditions under which transgressive overyielding is founded? If so, what is the relation of the virulence of the infection and the basic reproductive number $\mathcal{R_0}$?
 
 \section{Methods}
 
@@ -54,6 +54,25 @@ The relation to the original generalized Lotka-Volterra model (as pointed out by
 \label{table:parameters}
 \end{table}
 
-Since we are also ultimately interested in the dynamics when one of these competing species is infected with some type of pathogen, we can additionally consider species 1 as being infected with a generalized pathogen.
+Since we are also ultimately interested in the dynamics when one of these competing species is infected with some type of pathogen, we can additionally consider species 1 as being infected with a generalized pathogen. The following system is the one considered: 
+
+```{dot}
+graph G {
+  layout=neato
+  run->intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+```
 
 \section{References}
