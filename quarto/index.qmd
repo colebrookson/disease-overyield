@@ -12,8 +12,6 @@ abstract: |
 date: last-modified
 bibliography: references.bib
 csl: ecology-letters.csl
-citation:
-  container-title: Earth and Space Science
 number-sections: true
 jupyter: julia-1.10
 ---
