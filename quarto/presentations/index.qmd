@@ -7,11 +7,19 @@ format:
     theme: simple
     slide-number: true
     footer: "Poisot Lab meeting May 2024"
+    include-in-header: 
+      text: |
+        <style>
+        .center h1, h2 {
+          text-align: center;
+        }
+        </style>
 ---
 
-# Background
 
-## Biodiversity & Ecosystem Functioning (BEF)
+# Background {.center}
+
+## Biodiversity & Ecosystem Functioning (BEF) {.center}
 
 ::: columns
 ::: {.column width="50%"}
@@ -35,27 +43,47 @@ format:
 :::
 
 
-## The simple case of monoculture
+## The simple case of monoculture can provide valuable insight {.center}
+
+
+::: columns
+::: {.column width="50%"}
 
 ::: incremental
+- Original theory came from monoculture experiments and grasslands
+- Two (or more) species growing together could out-perform a single species 
+- Niche complimentarity is often used to substantiate this
+:::
 
 :::
 
-![](images/mono-vs-polyculture.jpg){.absolute top="170" left="30" width="400" height="400"}
+::: {.column width="50%"}
 
-::: {style="text-align: center; margin-top: 1em"}
-Question
+![](images/mono-vs-polyculture.jpg){fig-align="right"width="500" height="300" bottom="25"}
+
+:::
 :::
 
 ::: {.notes}
-So here I've stolen one of Colin's figures from his paper with Ellen Bannon 
+The idea here is that if you're using abundance or biomass as your measure of interest, you'll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it's carrying capacity in monoculture due to factors 
 :::
 
-## On the predictability of timeseries disease data{.smaller}
+## How can we measure this BEF relationship?
 
-- What is a timeseries
-- How do we think about modeling them? 
-- Are they in fact predictable? 
+::: columns
+::: {.column width="50%"}
+::: incremental
+- When does a mixture out-perform the highest yeilding monoculture? 
+- Easiest to think about this with respect to classic Lotka-Volterra models
+:::
+:::
+::: {.column width="50%"}
+![](images/mono-vs-polyculture.jpg){fig-align="right"width="500" height="300" bottom="25"}
+:::
+:::
+::: {.notes}
+The idea here is that if you're using abundance or biomass as your measure of interest, you'll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it's carrying capacity in monoculture due to factors 
+:::
 
 ## Intrinsic vs. realized predictability{.smaller}
 

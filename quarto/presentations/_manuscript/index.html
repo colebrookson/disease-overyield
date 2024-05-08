@@ -323,6 +323,11 @@
       margin-right: 0; 
     }
   </style>
+  <style>
+  .center h1, h2 {
+    text-align: center;
+  }
+  </style>
 <meta name="citation_title" content="The impact of disease on biodiversity-ecosystem functioning">
 <meta name="citation_author" content="Cole ">
 <meta name="citation_language" content="en">
@@ -349,7 +354,7 @@ Cole
 <h1>Background</h1>
 
 </section>
-<section id="biodiversity-ecosystem-functioning-bef" class="slide level2">
+<section id="biodiversity-ecosystem-functioning-bef" class="slide level2 center">
 <h2>Biodiversity &amp; Ecosystem Functioning (BEF)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -371,17 +376,27 @@ Cole
 <p><strong>But through what mechanism?</strong></p>
 </div>
 </section>
-<section id="the-simple-case-of-monoculture" class="slide level2">
-<h2>The simple case of monoculture</h2>
+<section id="the-simple-case-of-monoculture-can-provide-valuable-insight" class="slide level2 center">
+<h2>The simple case of monoculture can provide valuable insight</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div>
-
+<ul>
+<li class="fragment">Original theory came from monoculture experiments and grasslands</li>
+<li class="fragment">Two (or more) species growing together could out-perform a single species</li>
+<li class="fragment">Niche complimentarity is often used to substantiate this</li>
+</ul>
 </div>
-<p><a href="images/mono-vs-polyculture.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/mono-vs-polyculture.jpg" class="absolute" style="top: 170px; left: 30px; width: 400px; height: 400px; "></a></p>
-<div style="text-align: center; margin-top: 1em">
-<p>Question</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><a href="images/mono-vs-polyculture.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/mono-vs-polyculture.jpg" class="quarto-figure quarto-figure-right" data-bottom="25" width="500" height="300"></a></p>
+</figure>
+</div>
+</div>
 </div>
 <aside class="notes">
-<p>So here I’ve stolen one of Colin’s figures from his paper with Ellen Bannon</p>
+<p>The idea here is that if you’re using abundance or biomass as your measure of interest, you’ll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it’s carrying capacity in monoculture due to factors</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -394,13 +409,37 @@ Cole
           display:block!important;
       }</style></aside>
 </section>
-<section id="on-the-predictability-of-timeseries-disease-data" class="slide level2 smaller">
-<h2>On the predictability of timeseries disease data</h2>
+<section id="how-can-we-measure-this-bef-relationship" class="slide level2">
+<h2>How can we measure this BEF relationship?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
 <ul>
-<li>What is a timeseries</li>
-<li>How do we think about modeling them?</li>
-<li>Are they in fact predictable?</li>
+<li class="fragment">When does a mixture out-perform the highest yeilding monoculture?</li>
+<li class="fragment">Easiest to think about this with respect to classic Lotka-Volterra models</li>
 </ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><a href="images/mono-vs-polyculture.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/mono-vs-polyculture.jpg" class="quarto-figure quarto-figure-right" data-bottom="25" width="500" height="300"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>The idea here is that if you’re using abundance or biomass as your measure of interest, you’ll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it’s carrying capacity in monoculture due to factors</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="intrinsic-vs.-realized-predictability" class="slide level2 smaller">
 <h2>Intrinsic vs.&nbsp;realized predictability</h2>
@@ -888,7 +927,7 @@ Cole
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
