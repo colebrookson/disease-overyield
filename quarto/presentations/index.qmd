@@ -1,0 +1,129 @@
+---
+title: "The impact of disease on biodiversity-ecosystem functioning"
+subtitle: "What I've been working on so far"
+author: Cole
+format:
+  revealjs: 
+    theme: simple
+    slide-number: true
+    footer: "Poisot Lab meeting May 2024"
+---
+
+# Background
+
+## Biodiversity & Ecosystem Functioning (BEF)
+
+::: columns
+::: {.column width="50%"}
+
+::: incremental
+- Greater biodiversity leads to greater ecosystem functioning 
+- Elton (1958) said that greater diversity would drive greater function, reified in the 90s/00s by Tillman, Huston, Loreau 
+:::
+
+:::
+
+::: {.column width="50%"}
+
+![](images/biodiverse-forest.avif){fig-align="right"width="500" height="300" bottom="50"}
+
+:::
+:::
+
+::: {.fragment .fade-in style="text-align: center; margin-top: 0.5em"}
+**But through what mechanism?**
+:::
+
+
+## The simple case of monoculture
+
+::: incremental
+
+:::
+
+![](images/mono-vs-polyculture.jpg){.absolute top="170" left="30" width="400" height="400"}
+
+::: {style="text-align: center; margin-top: 1em"}
+Question
+:::
+
+::: {.notes}
+So here I've stolen one of Colin's figures from his paper with Ellen Bannon 
+:::
+
+## On the predictability of timeseries disease data{.smaller}
+
+- What is a timeseries
+- How do we think about modeling them? 
+- Are they in fact predictable? 
+
+## Intrinsic vs. realized predictability{.smaller}
+
+- What is the difference 
+
+# Wavelets, DLMs, and variance decomposition, oh my!{.smaller}
+
+## Regressing messy data{.smaller}
+
+- signal vs noise
+- how to approach extracting signal
+
+## Wavelets, wavelet-packets, and DWT{.smaller}
+
+- these things
+
+## Maximal overlap wavelet-packet transformation
+
+- go through high vs low pass filters 
+- the math behind it
+
+## Distributed lag models 
+
+- what is a lag 
+- why and how to fit a lag
+
+# If one fits a model, one is obligated to forecast with it 
+
+## Forecasting off a DLM
+
+- some of the challenges
+- why it's useful 
+
+## Variance partitioning 
+
+- an essential way to asses performance of the model 
+- an even more essential way to understand the basic underpining of one's understanding of the process variance still to be modeled
+
+# The annoying side-note of data availability 
+
+## Data at present 
+
+::: {.fragment .center-xy}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+# Contextualizing regression models with fully expanded spatial models 
+
+## What else impacts disease transmission
+
+- we can model these other processes for a small handful of diseases
+- it's important to do so, so that we can actually nail down what we're really missing when we take a "hands over eyes" regression approach 
+
+## Future aims to do so with flu case study 
+
