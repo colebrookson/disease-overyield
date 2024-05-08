@@ -34,6 +34,7 @@
     }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="style.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -323,11 +324,6 @@
       margin-right: 0; 
     }
   </style>
-  <style>
-  .center h1, h2 {
-    text-align: center;
-  }
-  </style>
 <meta name="citation_title" content="The impact of disease on biodiversity-ecosystem functioning">
 <meta name="citation_author" content="Cole ">
 <meta name="citation_language" content="en">
@@ -409,7 +405,7 @@ Cole
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-measure-this-bef-relationship" class="slide level2">
+<section id="how-can-we-measure-this-bef-relationship" class="slide level2 center">
 <h2>How can we measure this BEF relationship?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -427,25 +423,48 @@ Cole
 </div>
 </div>
 </div>
-<aside class="notes">
-<p>The idea here is that if you’re using abundance or biomass as your measure of interest, you’ll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it’s carrying capacity in monoculture due to factors</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="intrinsic-vs.-realized-predictability" class="slide level2 smaller">
-<h2>Intrinsic vs.&nbsp;realized predictability</h2>
+<section id="lotka-volterra-models-for-bef" class="slide level2 center">
+<h2>Lotka-Volterra models for BEF</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><span class="math display">\[\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)\]</span> <span class="math display">\[\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)\]</span></p>
+</div>
+</div>
+</section>
+<section id="lotka-volterra-models-for-bef-1" class="slide level2 center">
+<h2>Lotka-Volterra models for BEF</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><span class="math display">\[\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)\]</span> <span class="math display">\[\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)\]</span></p>
 <ul>
-<li>What is the difference</li>
+<li>within-species competition <span class="math inline">\((\alpha_{ii})\)</span></li>
+<li>between-species competition <span class="math inline">\((\alpha_{ij})\)</span></li>
+<li>maximum per-capita growth rate (<span class="math inline">\(r_i\)</span>)</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="lotka-volterra-models-for-bef-2" class="slide level2 center">
+<h2>Lotka-Volterra models for BEF</h2>
+<div class="columns" style="display: flex !important; height: 90%;">
+<div class="column" style="width:70%;">
+<p><span class="math display">\[\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)\]</span> <span class="math display">\[\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)\]</span></p>
+<ul>
+<li>within-species competition <span class="math inline">\((\alpha_{ii})\)</span></li>
+<li>between-species competition <span class="math inline">\((\alpha_{ij})\)</span></li>
+<li>maximum per-capita growth rate (<span class="math inline">\(r_i\)</span>)</li>
+</ul>
+</div><div class="column" style="width: 30%; font-size: 60%; display: flex; justify-content: center; align-items: center;">
+<ul>
+<li>To put in terms of carrying capacity <span class="math inline">\((K)\)</span>
+<ul>
+<li><span class="math inline">\(\alpha_{ii} = 1/K_i\)</span></li>
+<li><span class="math inline">\(\alpha{ij} = \alpha_ij / K_i\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section></section>
 <section>
 <section id="wavelets-dlms-and-variance-decomposition-oh-my" class="title-slide slide level1 smaller center">
@@ -927,7 +946,7 @@ Cole
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;

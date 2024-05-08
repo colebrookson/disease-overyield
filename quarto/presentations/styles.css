@@ -5,3 +5,15 @@
 .border-thick {
     border-width: 3px;
 }
+
+.center h1,
+h2 {
+    text-align: center;
+}
+
+.v-center-container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
