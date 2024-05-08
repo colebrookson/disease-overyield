@@ -17,21 +17,15 @@ format:
 
 ::: columns
 ::: {.column width="50%"}
-
 ::: incremental
 - Greater biodiversity leads to greater ecosystem functioning 
 - Elton (1958) said that greater diversity would drive greater function, reified in the 90s/00s by Tillman, Huston, Loreau 
 :::
-
 :::
-
 ::: {.column width="50%"}
-
 ![](images/biodiverse-forest.avif){fig-align="right"width="500" height="300" bottom="50"}
-
 :::
 :::
-
 ::: {.fragment .fade-in style="text-align: center; margin-top: 0.5em"}
 **But through what mechanism?**
 :::
@@ -39,25 +33,18 @@ format:
 
 ## The simple case of monoculture can provide valuable insight {.center}
 
-
 ::: columns
 ::: {.column width="50%"}
-
 ::: incremental
 - Original theory came from monoculture experiments and grasslands
 - Two (or more) species growing together could out-perform a single species 
 - Niche complimentarity is often used to substantiate this
 :::
-
 :::
-
 ::: {.column width="50%"}
-
 ![](images/mono-vs-polyculture.jpg){fig-align="right"width="500" height="300" bottom="25"}
-
 :::
 :::
-
 ::: {.notes}
 The idea here is that if you're using abundance or biomass as your measure of interest, you'll end up with a higher yeild over the same area if there is more biodiversity than if just a single species was growing at it's carrying capacity in monoculture due to factors 
 :::
@@ -85,6 +72,10 @@ $$\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)$$
 $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 :::
 :::
+::: {style="font-size:50%"}
+Abrams (2022)
+:::
+
 
 ## Lotka-Volterra models for BEF {.center}
 
@@ -97,6 +88,9 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 - between-species competition $(\alpha_{ij})$
 - maximum per-capita growth rate ($r_i$)
 :::
+:::
+::: {style="font-size:50%"}
+Abrams (2022)
 :::
 
 ## Lotka-Volterra models for BEF {.center}
@@ -116,10 +110,12 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
   - $\alpha{ij} = \alpha_ij / K_i$
 :::
 :::
+::: {style="font-size:50%"}
+Abrams (2022)
+:::
 
-# Wavelets, DLMs, and variance decomposition, oh my!{.smaller}
+## Transgressive overyielding 
 
-## Regressing messy data{.smaller}
 
 - signal vs noise
 - how to approach extracting signal
