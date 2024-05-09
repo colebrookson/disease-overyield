@@ -157,6 +157,7 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 ![](images/loreau-2004-isoclines.png){fig-align="left"width="450" height="300" bottom="25"}
 :::
 :::
+- Coexistence (no T.O.) occurs IFF $\alpha_{21} < \frac{K_2}{K_1} < \frac{1}{\alpha_{12}}$
 
 ## Simple competition w/ Lotka-Volterra for BEF                     
 
@@ -199,6 +200,105 @@ $$N_1 = \left(1-\phi N_1\right)+\phi N_1$$
 **From this we can get an expression for ceoxistence & T.O.**
 :::
 
+## Simple dynamics - infection is never cleared
 
-## slide 
+::: {.columns}
+::: {.column style="width: 50%"}
+::: incremental
+- Assume $S-I$ dynamics 
+- $N_1 = S + I$
+- $\frac{dS}{dt} = -\beta S I$
+- $\frac{dI}{dt} = \beta S I$
+:::
+:::
+::: {.column style="width: 50%"}
+![](images/daphnia.jpg){fig-align="right"width="450" height="300" bottom="25"}
+:::
+:::
+::: {.fragment .fade-in style="text-align: center; margin-top: 0.2em"}
+**In a simple system where T.O. has been shown, is T.O. still possible when $N_1$ is infected with a pathogen?**
+:::
+
+## (Slightly) more complex dynamics - recovered stage
+
+::: {.columns}
+::: {.column style="width: 60%"}
+::: incremental
+- Assume classic $SIR$ dynamics 
+- $N_1 = S + I + R$
+- $\frac{dS}{dt} = -\beta S I - \delta R$
+- $\frac{dI}{dt} = \beta S I + \gamma I$
+- $\frac{dR}{dt} = \gamma I - \delta R$
+:::
+:::
+::: {.column style="width: 40%"}
+![](images/crop-rust-leaves.jpg){fig-align="right"width="450" height="300" bottom="25"}
+:::
+:::
+::: {.fragment .fade-in style="text-align: center; margin-top: 0.2em"}
+**When will T.O. still happen? Is there a parameter space under which if $K_2 < K_1$ that T.O. still occurs?**
+:::
+
+## What are the limits of coexistence & T.O. given $SIR$ dynamics? I
+
+::: {.v-center-container}
+::: {.column style="width: 60%"}
+::: incremental
+- Derrive separatrices ~ $f(R_0)$
+  - Under what $R_0$ do they collapse to one / none?
+:::
+:::
+::: {.column style="width: 40%"}
+![](images/poisot-parameter-space.png){fig-align="right"width="450" height="300" bottom="25"}
+:::
+:::
+
+## What are the limits of coexistence & T.O. given $SIR$ dynamics? II
+
+::: {.columns}
+::: {.column style="width: 60%"}
+::: incremental
+- [@grunert_evolutionarily_2021] showed that where you introduce a perturbation into a limit cycle changes the transient *and* long-term dynamics 
+- Does this happen with the introduction of parasite dynamics as well? 
+:::
+:::
+::: {.column style="width: 40%"}
+![](images/limit-cycle.png){fig-align="right"width="450" height="300" bottom="25"}
+:::
+:::
+
+## What are the limits of coexistence & T.O. given $SIR$ dynamics? III
+
+::: {.columns}
+::: {.column style="width: 50%"}
+::: incremental
+- [@abrams_competition_2022] showed that non-linear growth changes coex. dynamics - what effect does non-linear growth have here? 
+- If $K_1 > K_2$, and $N_1 = S + I + R$ but $N_2$ grows sublinearly? 
+:::
+:::
+::: {.column style="width: 50%"}
+![](images/hatton-growth.png){fig-align="right"width="450" height="300" bottom="25"}
+:::
+:::
+
+## Overall...
+
+::: {.columns .v-center-container}
+::: {.column style="width: 80%"}
+::: incremental
+- No one has yet explored how disease dynamics impact T.O. which is a major way of measuring the BEF relationship
+- Increasing complexity of disease dynamics considered likely change the conditions under which 
+  - T.O. exists
+  - we can *find* a simple condition for T.O. 
+- **Goal is to determine the limits of where this framework will take us when  considering ID & T.O.**
+:::
+:::
+:::
+
+# Thoughts?
+
+
+## Refs 
+
+
 
