@@ -150,26 +150,16 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 
 ::: {.columns}
 ::: {.column style="width: 50%"}
-::: incremental
 - [@loreau_does_2004] showed that transgressive overyielding can happen if if the following condition is satisfied:
 - $(1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) > 0$
 :::
-:::
-:::
-
-## Transgressive overyielding (mathematically)
-
-::: {.columns}
-::: {.column style="width: 49%"}
-- [@loreau_does_2004] showed that transgressive overyielding can happen if if the following condition is satisfied:
-- $(1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) > 0$
-:::
-::: {.column style="width: 49%"}
+::: {.column style="width: 50%"}
 ![](images/loreau-2004-isoclines.png){fig-align="left"width="450" height="300" bottom="25"}
 :::
 :::
 
-## Simple competition w/ Lotka-Volterra for BEF 
+## Simple competition w/ Lotka-Volterra for BEF                     
+
 ```{dot}
 digraph ok {
 //  rankdir=LR
@@ -185,6 +175,30 @@ digraph ok {
   }
 }
 ```
+
+## Simple competition w/ Lotka-Volterra for BEF ... but with disease 
+
+![](images/comp-w-pathogen.png){fig-align="center"}
+
+# What happens to the dynamics of the BEF relationship if you add in a disease component?
+
+## A starting place - $R_0$
+
+::: {.columns}
+::: {.column style="width: 100%; font-size: 80%; display: flex; justify-content: center; align-items: center;"}
+::: incremental
+- Assume that $N_1$ is lower yielding and is the pop'n getting infected $(K_1 < K_2)$
+- If some proportion of $N_1$ is infected, we can restate our equations 
+$$\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)$$
+$$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
+$$N_1 = \left(1-\phi N_1\right)+\phi N_1$$
+:::
+:::
+:::
+::: {.fragment .fade-in style="text-align: center; margin-top: 0.2em"}
+**From this we can get an expression for ceoxistence & T.O.**
+:::
+
 
 ## slide 
 

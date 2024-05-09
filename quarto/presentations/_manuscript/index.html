@@ -579,24 +579,11 @@ Cole
 <h2>Transgressive overyielding (mathematically)</h2>
 <div class="columns">
 <div class="column" style="width: 50%">
-<div>
-<ul>
-<li class="fragment"><span class="citation" data-cites="loreau_does_2004">(<a href="#/slide" role="doc-biblioref" onclick="">Loreau 2004</a>)</span> showed that transgressive overyielding can happen if if the following condition is satisfied:</li>
-<li class="fragment"><span class="math inline">\((1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) &gt; 0\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="transgressive-overyielding-mathematically-1" class="slide level2">
-<h2>Transgressive overyielding (mathematically)</h2>
-<div class="columns">
-<div class="column" style="width: 49%">
 <ul>
 <li><span class="citation" data-cites="loreau_does_2004">(<a href="#/slide" role="doc-biblioref" onclick="">Loreau 2004</a>)</span> showed that transgressive overyielding can happen if if the following condition is satisfied:</li>
 <li><span class="math inline">\((1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) &gt; 0\)</span></li>
 </ul>
-</div><div class="column" style="width: 49%">
+</div><div class="column" style="width: 50%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><a href="images/loreau-2004-isoclines.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/loreau-2004-isoclines.png" class="quarto-figure quarto-figure-left" data-bottom="25" width="450" height="300"></a></p>
@@ -646,6 +633,35 @@ Cole
 <p></p></figure><p></p>
 </div>
 </div>
+</div>
+</section>
+<section id="simple-competition-w-lotka-volterra-for-bef-but-with-disease" class="slide level2">
+<h2>Simple competition w/ Lotka-Volterra for BEF … but with disease</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/comp-w-pathogen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/comp-w-pathogen.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="what-happens-to-the-dynamics-of-the-bef-relationship-if-you-add-in-a-disease-component" class="title-slide slide level1 center">
+<h1>What happens to the dynamics of the BEF relationship if you add in a disease component?</h1>
+
+</section>
+<section id="a-starting-place---r_0" class="slide level2">
+<h2>A starting place - <span class="math inline">\(R_0\)</span></h2>
+<div class="columns">
+<div class="column" style="width: 100%; font-size: 80%; display: flex; justify-content: center; align-items: center;">
+<div>
+<ul>
+<li class="fragment">Assume that <span class="math inline">\(N_1\)</span> is lower yielding and is the pop’n getting infected <span class="math inline">\((K_1 &lt; K_2)\)</span></li>
+<li class="fragment">If some proportion of <span class="math inline">\(N_1\)</span> is infected, we can restate our equations <span class="math display">\[\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)\]</span> <span class="math display">\[\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)\]</span> <span class="math display">\[N_1 = \left(1-\phi N_1\right)+\phi N_1\]</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" style="text-align: center; margin-top: 0.2em">
+<p><strong>From this we can get an expression for ceoxistence &amp; T.O.</strong></p>
 </div>
 </section>
 <section id="slide" class="slide level2 smaller scrollable">
@@ -1062,7 +1078,7 @@ Vandermeer, John H. 1992. <em>The Ecology of Intercropping</em>. Cambridge unive
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
+    <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
