@@ -2,12 +2,13 @@
 title: "The impact of disease on biodiversity-ecosystem functioning"
 subtitle: "What I've been working on so far"
 author: Cole
+bibliography: disease-overyield.bib
 format:
   revealjs: 
     theme: simple
     slide-number: true
     footer: "Poisot Lab meeting May 2024"
-    css: style.css
+    css: styles.css
 ---
 
 
@@ -15,7 +16,7 @@ format:
 
 ## Biodiversity & Ecosystem Functioning (BEF) {.center}
 
-::: columns
+::: {.columns .v-center-container}
 ::: {.column width="50%"}
 ::: incremental
 - Greater biodiversity leads to greater ecosystem functioning 
@@ -33,7 +34,7 @@ format:
 
 ## The simple case of monoculture can provide valuable insight {.center}
 
-::: columns
+::: {.columns .v-center-container}
 ::: {.column width="50%"}
 ::: incremental
 - Original theory came from monoculture experiments and grasslands
@@ -51,7 +52,7 @@ The idea here is that if you're using abundance or biomass as your measure of in
 
 ## How can we measure this BEF relationship? {.center}
 
-::: columns
+::: {.columns .v-center-container}
 ::: {.column width="50%"}
 ::: incremental
 - When does a mixture out-perform the highest yeilding monoculture? 
@@ -63,23 +64,40 @@ The idea here is that if you're using abundance or biomass as your measure of in
 :::
 :::
 
+## Simple competition w/ Lotka-Volterra for BEF 
+
+```{dot}
+digraph ok {
+//  rankdir=LR
+  subgraph cluster_0 {
+      style=filled;
+      color=lightgrey;
+      {rank=same
+        node[style=filled,shape="rectangle",color=black,fillcolor=white];
+        edge[label="Competition", fontsize=20, len=f];
+        "Species 1" ->  "Species 2" [dir="both"]
+        
+      }
+  }
+}
+```
 
 ## Lotka-Volterra models for BEF {.center}
 
-::: columns
+::: {.columns .v-center-container}
 ::: {.column width="70%"}
 $$\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)$$
 $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 :::
 :::
-::: {style="font-size:50%"}
-Abrams (2022)
+::: {style="font-size:50%; .bottom-left"}
+[@abrams_competition_2022]
 :::
 
 
 ## Lotka-Volterra models for BEF {.center}
 
-::: columns
+::: {.columns .v-center-container}
 ::: {.column width="70%"}
 $$\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)$$
 $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
@@ -89,13 +107,13 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 - maximum per-capita growth rate ($r_i$)
 :::
 :::
-::: {style="font-size:50%"}
-Abrams (2022)
+::: {style="font-size:50%; .bottom-left"}
+[@abrams_competition_2022]
 :::
 
 ## Lotka-Volterra models for BEF {.center}
 
-::: {.columns style='display: flex !important; height: 90%;'}
+::: {.columns .v-center-container}
 ::: {.column width="70%"}
 $$\frac{dN_1}{dt} = N_1 (r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)$$
 $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
@@ -107,75 +125,66 @@ $$\frac{dN_2}{dt} = N_2 (r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)$$
 ::: {.column style="width: 30%; font-size: 60%; display: flex; justify-content: center; align-items: center;"}
 - To put in terms of carrying capacity $(K)$    
   - $\alpha_{ii} = 1/K_i$
-  - $\alpha{ij} = \alpha_ij / K_i$
+  - $\alpha{ij} = \alpha_{ij} / K_i$
 :::
 :::
 ::: {style="font-size:50%"}
-Abrams (2022)
+[@abrams_competition_2022]
 :::
 
 ## Transgressive overyielding 
 
-
-- signal vs noise
-- how to approach extracting signal
-
-## Wavelets, wavelet-packets, and DWT{.smaller}
-
-- these things
-
-## Maximal overlap wavelet-packet transformation
-
-- go through high vs low pass filters 
-- the math behind it
-
-## Distributed lag models 
-
-- what is a lag 
-- why and how to fit a lag
-
-# If one fits a model, one is obligated to forecast with it 
-
-## Forecasting off a DLM
-
-- some of the challenges
-- why it's useful 
-
-## Variance partitioning 
-
-- an essential way to asses performance of the model 
-- an even more essential way to understand the basic underpining of one's understanding of the process variance still to be modeled
-
-# The annoying side-note of data availability 
-
-## Data at present 
-
-::: {.fragment .center-xy}
-Fade in
+::: {.columns .v-center-container}
+::: {.column style="width: 50%"}
+::: incremental
+- Occurs when productivity of mixture exceeds that of monoculture [@harper_population_1977; @vandermeer_ecology_1992; @loreau_does_2004]
+- Has been shown to be the case in experimental systems and in the field [@cardinale_functional_2011; @mora_alternative_2014] 
+:::
+:::
+::: {.column style="width: 50%; font-size: 60%; display: flex; justify-content: center; align-items: center;"}
+![](images/biodiversity-garden.jpg){fig-align="right"width="500" height="300" bottom="25"}
+:::
 :::
 
-::: {.fragment .fade-out}
-Fade out
+## Transgressive overyielding (mathematically)
+
+::: {.columns}
+::: {.column style="width: 50%"}
+::: incremental
+- [@loreau_does_2004] showed that transgressive overyielding can happen if if the following condition is satisfied:
+- $(1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) > 0$
+:::
+:::
 :::
 
-::: {.fragment .highlight-red}
-Highlight red
+## Transgressive overyielding (mathematically)
+
+::: {.columns}
+::: {.column style="width: 49%"}
+- [@loreau_does_2004] showed that transgressive overyielding can happen if if the following condition is satisfied:
+- $(1-\alpha_{21})(1-\frac{K_2}{K_1}\alpha_{12}) > 0$
+:::
+::: {.column style="width: 49%"}
+![](images/loreau-2004-isoclines.png){fig-align="left"width="450" height="300" bottom="25"}
+:::
 :::
 
-::: {.fragment .fade-in-then-out}
-Fade in, then out
-:::
+## Simple competition w/ Lotka-Volterra for BEF 
+```{dot}
+digraph ok {
+//  rankdir=LR
+  subgraph cluster_0 {
+      style=filled;
+      color=lightgrey;
+      {rank=same
+        node[style=filled,shape="rectangle",color=black,fillcolor=white];
+        edge[label="Competition", fontsize=20, len=f];
+        "Species 1" ->  "Species 2" [dir="both"]
+        
+      }
+  }
+}
+```
 
-::: {.fragment .fade-up}
-Slide up while fading in
-:::
-
-# Contextualizing regression models with fully expanded spatial models 
-
-## What else impacts disease transmission
-
-- we can model these other processes for a small handful of diseases
-- it's important to do so, so that we can actually nail down what we're really missing when we take a "hands over eyes" regression approach 
-
-## Future aims to do so with flu case study 
+## slide 
 
