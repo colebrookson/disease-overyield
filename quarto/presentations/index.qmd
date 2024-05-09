@@ -27,7 +27,7 @@ format:
 ![](images/biodiverse-forest.avif){fig-align="right"width="500" height="300" bottom="50"}
 :::
 :::
-::: {.fragment .fade-in style="text-align: center; margin-top: 0.5em"}
+::: {.fragment .fade-in style="text-align: center; bottom:30"}
 **But through what mechanism?**
 :::
 
