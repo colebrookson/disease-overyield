@@ -22,17 +22,28 @@ Previous work has shown that the coexistence of a pair or mixture of species can
 
 \section{Methods}
 
-We start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of @abrams_competition_2022[pg. 39], which includes terms for both inter- and intra-specific competition. We then have
+We start from the assumption of two species competing, in a Lotka-Volterra model. We use the form of @abrams_competition_2022[pg. 4], which includes terms for both inter- and intra-specific competition. We then have
 
 \begin{equation}
-  \label{eqn:simple-lv-1}
-  \frac{dN_1}{dt} = N_1(r_1 - \alpha_{11}N_1 - \alpha_{12}N_2)
-\end{equation} \begin{equation}
-  \label{eqn:simple-lv-2}
-  \frac{dN_2}{dt} = N_2(r_2 - \alpha_{21}N_1 - \alpha_{22}N_2)
+\begin{aligned}
+\label{eqn:simple-lv-1}
+ \frac{\mathrm{d} N_1}{\mathrm{d}t} = r_1 N_1 \left( 1 - \frac{N_1 - N_2 \alpha_{1 2}}{K_1} \right) &&
+\frac{\mathrm{d} N_2}{\mathrm{d}t} = r_2 N_2 \left( 1 - \frac{N_2 - N_1 \alpha_{2 1}}{K_2} \right)
+\begin{aligned}
 \end{equation}
 
 The relation to the original generalized Lotka-Volterra model (as pointed out by Abrams 2022) is that $\alpha_{ii} = \frac{1}{K_i}$ and $\alpha_{ij} = \frac{\alpha_{ij}}{K_i}$. 
+
+To start, we assume that one of the species, $N_1$ becomes infected with a generalized pathogen. A proportion of the population is infected, and this pathogen can have some impact on the ability of that population to grow. Our system \ref{eqn:simple-lv-1} now can be represented as
+
+\begin{align}
+\label{eqn:simple-lv-prop}
+\frac{\mathrm{d} N_1}{\mathrm{d}t} = (\phi r_{1\phi} N_1)((1-\phi) r_1 N_1)\left( 1 - \frac{N_1 - N_2 \alpha_{1 2}}{K_1} \right) \left( 1 - \phi \right) \phi \\
+\frac{\mathrm{d} N_2}{\mathrm{d}t} = r_2 N_2 \left( 1 - \frac{N_2 - N_1 \alpha_{2 1}}{K_2} \right)
+\end{align}
+
+
+
 
 Further and related, we can imagine one of these species becoming infected with a generalized pathogen. The closed population of that species now can be thought of as being described by a standard compartment model. That is, the number of individuals in $N_1$ can be thought of as divided into individuals that are susceptible, $S_1$, infected $I_1$, and recovered $R_1$ such that 
 
