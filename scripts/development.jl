@@ -24,15 +24,10 @@ end r₁ r₂ α₁₂ α₂₁ K₁ K₂
 latexify(lv)
 
 lv_prop = @ode_def lvProp begin
-    dN₁ = ((ϕ * r₁ᵩ * N₁) * (1 - ϕ) * r₁ * N₁) * (1 - ((N₁ + α₁₂ * N₂) / K₁))
+    dN₁ = ((ϕ * r₁ᵩ * N₁) * ((1 - ϕ) * r₁ * N₁)) * (1 - ((N₁ + α₁₂ * N₂) / K₁))
     dN₂ = r₂ * N₂ * (1 - ((N₂ + α₂₁ * N₁) / K₂))
 end r₁ r₁ᵩ r₂ α₁₂ α₂₁ K₁ K₂ ϕ
 latexify(lv_prop)
-
-
-
-
-
 
 
 
