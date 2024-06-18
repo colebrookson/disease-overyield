@@ -13,6 +13,6 @@ end
 function lotka_volterra!(du, u, p, t)
     N1, N2 = du
     r1, r2, K1, α12, α21, K2 = p
-    du[1] = dN1 = N1 * (r1 - (α11 * N1) - (α12 * N2))
-    du[2] = dN2 = N2 * (r2 - (α11 * N1) - (α22 * N2))
+    du[1] = dN1 = ((r1 * N1) / K1) * (K1 - N1 - (α12 * N2))
+    du[2] = dN2 = ((r2 * N2) / K2) * (K2 - N2 - (α21 * N1))
 end
