@@ -172,7 +172,7 @@
 
 \title{Mini-rotations - Trophic overyielding and infection dynamics}
 \author{Cole Brookson}
-\date{2024-05-15}
+\date{2024-06-18}
 
 \begin{document}
 \maketitle
@@ -214,26 +214,47 @@ Lotka-Volterra model. We use the form of Abrams (2022, pg. 4), which
 includes terms for both inter- and intra-specific competition. We then
 have
 
+\begin{subequations}\label{eq:lv}
 \begin{equation}
-\label{eqn:simple-lv-1}
- \frac{\mathrm{d} N_1}{\mathrm{d}t} = r_1 N_1 \left( 1 - \frac{N_1 - N_2 \alpha_{1 2}}{K_1} \right) \\
-\frac{\mathrm{d} N_2}{\mathrm{d}t} = r_2 N_2 \left( 1 - \frac{N_2 - N_1 \alpha_{2 1}}{K_2} \right) 
+ \frac{dN_1}{dt} = \frac{r_1N_1}{K_1}(K_1 - N_1 - \alpha_{12}N_2)
+\end{equation}
+\begin{equation}
+  \frac{dN_2}{dt} = \frac{r_2N_2}{K_2}(K_2 - N_2 - \alpha_{21}N_1) 
+\end{equation}
+\end{subequations}
+
+As Case (1999) showed, there is a stable equilibrium IFF
+
+\begin{equation}\label{eq:coex}
+\alpha_{21} < x < \frac{1}{\alpha_{12}}
 \end{equation}
 
-The relation to the original generalized Lotka-Volterra model (as
-pointed out by Abrams 2022) is that \(\alpha_{ii} = \frac{1}{K_i}\) and
-\(\alpha_{ij} = \frac{\alpha_{ij}}{K_i}\).
+where \begin{equation}\label{eq:rel-carry}
+x = \frac{K_2}{K_1}
+\end{equation}
+
+and Loreau (2004) showed that transgressive overyielding is present when
+
+\begin{equation}\label{eq:orig-TO}
+(1-\alpha_{21})(1-x\alpha_{12}) > 0.
+\end{equation}
+
+With this in mind, we aim to explore how this state can change under
+conditions of disease.
 
 To start, we assume that one of the species, \(N_1\) becomes infected
 with a generalized pathogen. A proportion of the population is infected,
 and this pathogen can have some impact on the ability of that population
-to grow. Our system \ref{eqn:simple-lv-1} now can be represented as
+to grow. Our system Eqs.\ref{eq:lv} now can be represented as
 
-\begin{align}
-\label{eqn:simple-lv-prop}
-\frac{\mathrm{d} N_1}{\mathrm{d}t} = (\phi r_{1\phi} N_1)((1-\phi) r_1 N_1)\left( 1 - \frac{N_1 - N_2 \alpha_{1 2}}{K_1} \right) \left( 1 - \phi \right) \phi \\
+\begin{subequations}\label{eq:lv-prop}
+\begin{equation}
+\frac{\mathrm{d} N_1}{\mathrm{d}t} = (r_{1\phi} \phi N_1)(r_1 (1-\phi)N_1)\left( 1 - \frac{N_1 - N_2 \alpha_{1 2}}{K_1} \right) 
+\end{equation}
+\begin{equation}
 \frac{\mathrm{d} N_2}{\mathrm{d}t} = r_2 N_2 \left( 1 - \frac{N_2 - N_1 \alpha_{2 1}}{K_2} \right)
-\end{align}
+\end{equation}
+\end{subequations}
 
 Further and related, we can imagine one of these species becoming
 infected with a generalized pathogen. The closed population of that
@@ -243,7 +264,7 @@ thought of as divided into individuals that are susceptible, \(S_1\),
 infected \(I_1\), and recovered \(R_1\) such that
 
 \begin{equation} 
-\label{eqn:sum-sir}
+\label{eq:sum-sir}
   N_1 = S_1 + I_1 + R_1
 \end{equation}
 
@@ -251,17 +272,17 @@ Further, we can then think of these dynamics as being described by a
 classic \(SIR\) model with the dynamics given by:
 
 \begin{equation}
-\label{eqn:basic-sir-s}
+\label{eq:basic-sir-s}
   \frac{dS}{dt} = - \beta S I + \delta R 
 \end{equation}
 
 \begin{equation}
-\label{eqn:basic-sir-i}
+\label{eq:basic-sir-i}
   \frac{dI}{dt} = \beta S I - \gamma I 
 \end{equation}
 
 \begin{equation}
-\label{eqn:basic-sir-r}
+\label{eq:basic-sir-r}
   \frac{dR}{dt} = \gamma I - \delta R
 \end{equation}
 
@@ -276,8 +297,8 @@ to:
 \tightlist
 \item
   Re-derive an expression for transgressive overyielding from the inter-
-  and intra-specific version of the GLV (Eqns \ref{eqn:simple-lv-1}
-  \ref{eqn:simple-lv-2})
+  and intra-specific version of the GLV (Eqns \ref{eq:simple-lv-1}
+  \ref{eq:simple-lv-2})
 \item
   Re-state this expression in terms of the infection parameters that
   will affect the inter-specifi competition
@@ -324,6 +345,11 @@ Notebook}}
 Abrams, P.A. (2022).
 \emph{\href{https://books.google.ca/books?hl=en&lr=&id=fTaFEAAAQBAJ&oi=fnd&pg=PP1&dq=abrams+2022+competition+theory&ots=_cdJwLVcq_&sig=ZUB2hKd4WD_YZsynGVHu114pnJ4}{Competition
 theory in ecology}}. Oxford University Press.
+
+\bibitem[\citeproctext]{ref-case_illustrated_1999}
+Case, T.J. (1999).
+\href{https://go.gale.com/ps/i.do?id=GALE\%7CA58517896&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00129658&p=AONE&sw=w}{Illustrated
+guide to theoretical ecology.} \emph{Ecology}, 80, 2848--2848.
 
 \bibitem[\citeproctext]{ref-johnson_frontiers_2015}
 Johnson, P.T.J., Ostfeld, R.S. \& Keesing, F. (2015).
